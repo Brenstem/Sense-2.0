@@ -58,21 +58,27 @@ public class PlayerGrab : MonoBehaviour
     {
         float pX = transform.position.x + boxCollPosition.x * transform.localScale.x;
         float pY = transform.position.y + boxCollPosition.y;
-        RaycastHit2D hitBox = Physics2D.BoxCast(new Vector2(pX, pY), boxCollSize, 0f, Vector2.zero, 0f, collideWithBoxLayer);
-        
-        if (hitBox)
+        RaycastHit2D[] hitBox = Physics2D.BoxCastAll(new Vector2(pX, pY), boxCollSize, 0f, Vector2.zero, 0f, collideWithBoxLayer);
+
+        collidingWithBox = false;
+        foreach(RaycastHit2D h in hitBox)
         {
-            if (grabbedBox == false && hitBox.transform.GetComponent<GroundCheckAdvanced>().isGrounded == true)
+            //Debug.Log(h.transform.name);
+            if (grabbedBox == false && h.transform.GetComponent<GroundCheckAdvanced>().isGrounded == true)
             {
-                boxGrabbed = hitBox.transform.gameObject;
-                
+                boxGrabbed = h.transform.gameObject;
+
                 collidingWithBox = true;
             }
+            //else
+            //{
+            //    collidingWithBox = false;
+            //}
         }
-        else
-        {
-            collidingWithBox = false;
-        }
+        //else
+        //{
+        //    collidingWithBox = false;
+        //}
 
         if (collidingWithBox == true && groundCheck.isGrounded)
         {

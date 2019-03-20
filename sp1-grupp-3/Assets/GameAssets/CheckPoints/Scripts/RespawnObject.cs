@@ -35,6 +35,10 @@ public class RespawnObject : MonoBehaviour
         {
             lc.FadeToLevel(1);
         }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            lc.FadeToLevel(0);
+        }
 
         if (respawn)
             Move(gameObject);
