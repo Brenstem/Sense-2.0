@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - DeathZone
+  - Environment
+  - StartButton
+  - CanvasEventSystem
+  - Credits
+  - PlatformMoving
+  - Box
+  - JumpThroughtPlatforms
+  - Platform
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Platform
+  - Box
+  - Camera
+  - FriendRobot
+  - JumpThroughPlatforms
+  - Wall
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Skybox
+    uniqueID: 989434243
+    locked: 0
+  - name: Stars
+    uniqueID: 1693583959
+    locked: 0
+  - name: Clouds
+    uniqueID: 2598583843
+    locked: 0
+  - name: Trash3
+    uniqueID: 214909899
+    locked: 0
+  - name: Trash2
+    uniqueID: 1527692419
+    locked: 0
+  - name: Trash1
+    uniqueID: 987222889
+    locked: 0
+  - name: Factory walls
+    uniqueID: 2688492431
+    locked: 0
+  - name: Jumpthrough
+    uniqueID: 2111481557
+    locked: 0
+  - name: Tiles
+    uniqueID: 1371964605
+    locked: 0
+  - name: Decoration
+    uniqueID: 1668827509
+    locked: 0
+  - name: Interactible
+    uniqueID: 930552583
+    locked: 0
+  - name: Ladder
+    uniqueID: 3917256119
+    locked: 0
+  - name: Player
+    uniqueID: 949128621
+    locked: 0
+  - name: Decoration foreground
+    uniqueID: 3631114463
+    locked: 0
+  - name: Dialogue
+    uniqueID: 234699705
+    locked: 0
