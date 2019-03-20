@@ -11,7 +11,7 @@ public class RespawnTrigger : MonoBehaviour
 
 public class RespawnObject : MonoBehaviour
 {
-
+    [SerializeField] private LevelChanger lc;
     [SerializeField]
     RespawnTrigger RespawnTrigger;
     PlayerMovement playerMove;
@@ -31,6 +31,11 @@ public class RespawnObject : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            lc.FadeToLevel(1);
+        }
+
         if (respawn)
             Move(gameObject);
     }
