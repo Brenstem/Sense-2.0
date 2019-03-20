@@ -11,6 +11,7 @@ public class MenuActions : MonoBehaviour
     [SerializeField] GameObject Title;
     [SerializeField] GameObject buttonHolder;
     [SerializeField] GameObject levelChanger;
+    [SerializeField] GameObject cutsceneTrigger;
 
     // Private variables
     private Animator creditsAnim;
@@ -102,9 +103,10 @@ public class MenuActions : MonoBehaviour
     // Credits playing
     public void PlayCredits()
     {
-        creditsHolder.SetActive(true);
+        //creditsHolder.SetActive(true);
         buttonHolder.SetActive(false);
         Title.SetActive(false);
-        creditsTimer.StartTimer(creditsAnim.GetCurrentAnimatorStateInfo(0).length);
+        cutsceneTrigger.GetComponent<VideoCutscene>().Play();
+        creditsTimer.StartTimer(45);
     }
 }

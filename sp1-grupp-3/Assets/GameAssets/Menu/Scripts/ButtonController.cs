@@ -16,6 +16,7 @@ public class ButtonController : MonoBehaviour, ISelectHandler
     // Reference fetching
     private void Start()
     {
+        canvasEventSystem.SetSelectedGameObject(selectOnStart);
         menuActions = menuActionController.GetComponent<MenuActions>();
     }
 
@@ -26,7 +27,7 @@ public class ButtonController : MonoBehaviour, ISelectHandler
 
         if (Input.GetAxis("Vertical") != 0 && !buttonSelected)
         {
-            canvasEventSystem.SetSelectedGameObject(selectOnStart);
+            //canvasEventSystem.SetSelectedGameObject(selectOnStart);
             buttonSelected = true;
         }
 

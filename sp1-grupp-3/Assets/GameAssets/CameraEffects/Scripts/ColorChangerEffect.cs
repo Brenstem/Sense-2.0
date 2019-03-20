@@ -34,10 +34,10 @@ public class ColorChangerEffect : MonoBehaviour
             profile.GetSetting<ColorGrading>().saturation.value = startingPoint;
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            ActivateEffect();
-        }
+        //if (Input.GetKeyDown(KeyCode.F))
+        //{
+        //    ActivateEffect();
+        //}
     }
 
     public void ActivateEffect()

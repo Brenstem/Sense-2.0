@@ -7,6 +7,7 @@ public class VideoCutscene : MonoBehaviour
 {
     public bool isPlaying = false;
     public bool hasPlayed = false;
+    [SerializeField] bool stopPlayer;
     [SerializeField] bool quitApplication;
     public GameObject player;
 
@@ -25,12 +26,18 @@ public class VideoCutscene : MonoBehaviour
     {
         if (videoPlayer.isPlaying)
         {
-            FMODUnity.RuntimeManager.MuteAllEvents(true); 
+            if (stopPlayer)
+            {
+                FMODUnity.RuntimeManager.MuteAllEvents(true);
+            }
         }
 
         if (isPlaying && !videoPlayer.isPlaying) {
             videoPlayer.Play();
-            playerMovement.enabled = false;
+            if (stopPlayer)
+            {
+                playerMovement.enabled = false;
+            }
         }
 
         else if (!isPlaying) {
@@ -43,20 +50,33 @@ public class VideoCutscene : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!hasPlayed) {
-            videoPlayer.targetCamera.GetComponent<ColorChangerEffect>().ActivateEffect();
+        Play();
+    }
+
+    public void Play()
+    {
+        if (!hasPlayed)
+        {
+            if (stopPlayer)
+            {
+                videoPlayer.targetCamera.GetComponent<ColorChangerEffect>().ActivateEffect();
+            }
+
             isPlaying = true;
             hasPlayed = true;
         }
-        
     }
 
     private void StopVideo(VideoPlayer vp)
     {
         vp.Stop();
         isPlaying = false;
-        playerMovement.enabled = true;
-        playerAnimator.enabled = true;
+
+        if (stopPlayer)
+        {
+            playerMovement.enabled = true; 
+        }
+
         if (quitApplication)
         {
 #if UNITY_EDITOR

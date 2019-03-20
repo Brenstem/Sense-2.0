@@ -385,6 +385,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605515351}
   m_CullTransparentMesh: 0
+--- !u!1 &888614269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9045081413382431086, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1443152944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &937446918
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +748,114 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1142445746}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1443152944
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9045081413382431086, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+        type: 3}
+      propertyPath: m_Name
+      value: CutsceneTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045081413382431074, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045081413382431074, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045081413382431074, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2211448
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045081413382431074, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045081413382431074, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045081413382431074, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045081413382431074, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045081413382431074, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045081413382431074, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045081413382431074, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045081413382431074, guid: 7337b45307ba7664fa3c1ea428d03b6a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 334678152, guid: 7337b45307ba7664fa3c1ea428d03b6a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 211825512, guid: 7337b45307ba7664fa3c1ea428d03b6a, type: 3}
+      propertyPath: m_TargetAudioSources.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 211825512, guid: 7337b45307ba7664fa3c1ea428d03b6a, type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 211825512, guid: 7337b45307ba7664fa3c1ea428d03b6a, type: 3}
+      propertyPath: m_EnabledAudioTracks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 211825512, guid: 7337b45307ba7664fa3c1ea428d03b6a, type: 3}
+      propertyPath: m_DirectAudioMutes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 211825512, guid: 7337b45307ba7664fa3c1ea428d03b6a, type: 3}
+      propertyPath: m_TargetCamera
+      value: 
+      objectReference: {fileID: 1709715832}
+    - target: {fileID: 211825512, guid: 7337b45307ba7664fa3c1ea428d03b6a, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 211825512, guid: 7337b45307ba7664fa3c1ea428d03b6a, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: e59da6bb96ae9104f8212815c43aaa07,
+        type: 3}
+    - target: {fileID: 211825512, guid: 7337b45307ba7664fa3c1ea428d03b6a, type: 3}
+      propertyPath: m_ControlledAudioTrackCount
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5836338480264715870, guid: 7337b45307ba7664fa3c1ea428d03b6a, type: 3}
+    - {fileID: 334678152, guid: 7337b45307ba7664fa3c1ea428d03b6a, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 7337b45307ba7664fa3c1ea428d03b6a, type: 3}
 --- !u!1001 &1464988374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1468,6 +1582,7 @@ MonoBehaviour:
   Title: {fileID: 1763957972}
   buttonHolder: {fileID: 605515351}
   levelChanger: {fileID: 513454435999713550}
+  cutsceneTrigger: {fileID: 888614269}
   onSelectSound: event:/Menu/Menu_SFX/sfx_onSelect
   onStartSound: event:/Menu/Menu_SFX/sfx_onStart
   onExitSound: event:/Menu/Menu_SFX/sfx_onExit

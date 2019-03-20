@@ -67,10 +67,10 @@ public class GroundCheck : MonoBehaviour
             if (hit.collider != null && Mathf.Abs(hit.normal.x) > 0.1f)
             {
                 Rigidbody2D body = GetComponent<Rigidbody2D>();
-                body.velocity = new Vector2(body.velocity.x - (hit.normal.x * slopeFriction), body.velocity.y);
+                //body.velocity = new Vector2(body.velocity.x - (hit.normal.x * slopeFriction), body.velocity.y);
                 
                 Vector2 position = transform.position;
-                position.y += -hit.normal.x * Mathf.Abs(body.velocity.x) * Time.deltaTime * (body.velocity.x - hit.normal.x > 0 ? 1 : -1);
+                //position.y += -hit.normal.x * Mathf.Abs(body.velocity.x) * Time.deltaTime * (body.velocity.x - hit.normal.x > 0 ? 1 : -1);
                 transform.position = position;
             }
         }
