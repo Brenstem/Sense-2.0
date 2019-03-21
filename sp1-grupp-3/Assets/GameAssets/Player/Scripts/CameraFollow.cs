@@ -4,34 +4,37 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [Header("Cameras Speed")]
-    public float smoothSpeed = 0.125f;
-    [Header("Cameras Offset From The Player")]
+    public GameObject cameraTarget;
+
+    public float cameraSpeed = 0.125f;
     public Vector3 offset = new Vector3(0f, 0f, -10f);
-    [Header("Players Prefab Object")]
-    public GameObject PrefabPlayer;
-    [Header("How Long Will The Camera Wait To Find The New Spawned Player")]
-    public float findDelayLength;
+    public float moveToDelayTime; //Time before moving to new target
+
     Vector3 velocity;
     GameObject player;
-    float findDelayTimer = 0;
+    float moveToDelayTimer = 0;
 
     void Start()
     {
-        findDelayTimer = findDelayLength;
+        moveToDelayTimer = moveToDelayTime;
         player = GameObject.Find("Player");
     }
 
     void FixedUpdate()
     {
-        findDelayTimer += Time.deltaTime;
-        if (findDelayTimer > findDelayLength)
+        moveToDelayTimer += Time.deltaTime;
+
+        if (cameraTarget == null) {
+            cameraTarget = player;
+        }
+
+        if (moveToDelayTimer > moveToDelayTime)
         {
-            if (player != null)
+            if (cameraTarget != null)
             {
-                CameraFollower(player.transform.position);
+                CameraFollower(cameraTarget.transform.position);
             }
-            findDelayTimer = findDelayLength + 1;
+            moveToDelayTimer = moveToDelayTime + 1;
         }
     }
 
@@ -39,7 +42,7 @@ public class CameraFollow : MonoBehaviour
     {
         Vector3 desiredPosition = target + offset;
 
-        Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, smoothSpeed);
+        Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, cameraSpeed);
         transform.position = smoothedPosition;
     }
 }
