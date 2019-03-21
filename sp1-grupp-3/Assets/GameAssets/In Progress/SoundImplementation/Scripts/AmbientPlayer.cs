@@ -41,4 +41,9 @@ public class AmbientPlayer : MonoBehaviour
         sound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         hasPlayed = false;
     }
+
+    private void OnDestroy()
+    {
+        Stop(sound);
+    }
 }
