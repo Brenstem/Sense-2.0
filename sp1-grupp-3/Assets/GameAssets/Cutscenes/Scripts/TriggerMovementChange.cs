@@ -11,8 +11,8 @@ public class TriggerMovementChange : MonoBehaviour
     {
         if (hitInfo.CompareTag(playerTag))
         {
-            hitInfo.GetComponent<PlayerMovement>().enableNewMovement = movementEnabled;
-            hitInfo.GetComponent<PlayerJump>().enableNewMovement = movementEnabled;
+            hitInfo.GetComponent<PlayerMovement>().enableNewMovement = !hitInfo.GetComponent<PlayerMovement>().enableNewMovement;
+            hitInfo.GetComponent<PlayerJump>().enableNewMovement = !hitInfo.GetComponent<PlayerJump>().enableNewMovement;
         }
     }
 }

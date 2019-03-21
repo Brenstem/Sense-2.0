@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b618bfacef114c74fbef0fed8f48815d, type: 3}
   m_Name: Upgraded Movement
   m_EditorClassIdentifier: 
-  speed: 2.5
+  speed: 3
   acceleration: 15
   deAcceleration: 10
-  jumpHeight: 6.5
+  jumpHeight: 7.5
   jumpSustain: 0.2
   maxFall: -10
   fallGravity: 3

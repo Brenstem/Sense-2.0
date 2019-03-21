@@ -31,11 +31,7 @@ public class RespawnObject : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            lc.FadeToLevel(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             lc.FadeToLevel(0);
         }

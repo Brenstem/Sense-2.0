@@ -57,6 +57,11 @@ public class MenuActions : MonoBehaviour
             buttonHolder.SetActive(true);
             Title.SetActive(true);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Quit();
+        }
     }
 
     // Quits game/stops playmode depending on build
