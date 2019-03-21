@@ -18,8 +18,11 @@ public class VideoCutscene : MonoBehaviour
     void Start()
     {
         videoPlayer = GetComponent<VideoPlayer>();
-        playerMovement = player.GetComponent<PlayerMovement>();
-        playerAnimator = player.GetComponent<Animator>();
+        if (stopPlayer)
+        {
+            playerMovement = player.GetComponent<PlayerMovement>();
+            playerAnimator = player.GetComponent<Animator>();
+        }
     }
 
     void Update()
